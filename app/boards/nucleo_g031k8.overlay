@@ -1,0 +1,16 @@
+/{
+	aliases {
+        	led-1 = &red_led;
+        	led-2 = &blue_led;
+    	};
+
+	leds {
+		red_led: led_1 {
+			gpios = <&gpioa 15 GPIO_ACTIVE_LOW>; // PA15
+		};
+		blue_led: led_2 {
+			gpios = <&gpiob 1 GPIO_ACTIVE_LOW>; // PB1
+		};
+	};
+
+};
