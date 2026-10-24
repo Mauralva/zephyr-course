@@ -1,0 +1,8 @@
+# Copyright (c) 2022 Joylab AG <team@joylab.ch>
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_OUR_BOARD
+	bool "Our Board"
+	help
+	  Our Board is a custom board based on the STM32G031K8 MCU.
+	select SOC_STM32G031XX
