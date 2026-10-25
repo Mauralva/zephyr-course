@@ -1,0 +1,6 @@
+board:
+  name: new_board
+  full_name: New Board From Scratch
+  vendor: mauro
+  socs:
+    - name: stm32g031xx

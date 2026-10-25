@@ -1,0 +1,56 @@
+/dts-v1/;
+#include <st/g0/stm32g031X8.dtsi>
+#include <st/g0/stm32g031k(4-6-8)tx-pinctrl.dtsi>
+
+/{
+
+	model = "New Board From Scratch";
+	compatible = "st,stm32g031k8-nucleo";
+
+	chosen {
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+	};
+
+	aliases {
+		led0 = &green_led_3;
+	};
+
+	leds: leds {
+		compatible = "gpio-leds";
+
+		green_led_3: led_3 {
+			gpios = <&gpioc 6 GPIO_ACTIVE_HIGH>;
+			label = "User LD3";
+		};
+	};
+};
+
+&timers3 {
+	status = "okay";
+
+	pwm3: pwm {
+		status = "okay";
+		pinctrl-0 = <&tim3_ch1_pc6>;
+		pinctrl-names = "default";
+	};
+};
+
+&clk_hsi {
+	status = "okay";
+};
+
+&pll {
+	div-m = <1>;
+	mul-n = <8>;
+	div-r = <2>;
+	clocks = <&clk_hsi>;
+	status = "okay";
+};
+
+&rcc {
+	clocks = <&pll>;
+	clock-frequency = <DT_FREQ_M(64)>;
+	ahb-prescaler = <1>;
+	apb1-prescaler = <1>;
+};

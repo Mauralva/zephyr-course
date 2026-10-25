@@ -1,0 +1,6 @@
+config BOARD_NEW_BOARD
+    bool "New Board From Scratch"
+    default y
+    help
+      New Board From Scratch is a custom board based on the STM32G031K8 MCU.
+    select SOC_STM32G031XX 
