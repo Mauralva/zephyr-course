@@ -1,0 +1,8 @@
+description: Custom GPIO LED Sensor
+
+compatible: "custom,led-sensor"
+
+properties:
+  gpios:
+    type: phandle-array
+    required: true

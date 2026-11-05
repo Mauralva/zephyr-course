@@ -1,0 +1,50 @@
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
+#include <zephyr/drivers/sensor.h>
+#include <zephyr/device.h>
+
+/*
+End-to-end test for a custom driver that uses the GPIO API to control an LED.
+DTS node added with compatible = "our,driver"
+Binding exists and is discoverable
+Kconfig symbol visible and enabled
+Driver source compiled by CMake
+Device is ready at runtime
+API calls return expected data
+*/
+
+
+#define LED_SENSOR_NODE DT_NODELABEL(my_led_sensor)
+
+int main(void)
+{
+    bool led_state = true;
+    const struct device *dev = DEVICE_DT_GET(LED_SENSOR_NODE);
+	struct sensor_value val;
+
+    if (!gpio_is_ready_dt(&led)) return 0;
+
+    if (gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE) < 0) return 0;
+
+    if (!device_is_ready(dev)) {
+		printk("LED sensor device not ready\n");
+		return 0;
+	}
+	printk("Device %s ready\n", dev->name);
+
+    while (1) {
+        if (gpio_pin_toggle_dt(&led) < 0) return 0;
+
+        led_state = !led_state;
+        LOG_INF("LED state: %s", led_state ? "ON" : "OFF");
+        //k_msleep(CONFIG_BLINK_SLEEP_TIME_MS);
+
+        sensor_sample_fetch(dev);
+		k_msleep(500);
+
+		sensor_channel_get(dev, SENSOR_CHAN_ALL, &val);
+		k_msleep(500);
+    }
+    return 0;
+}

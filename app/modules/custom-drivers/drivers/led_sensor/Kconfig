@@ -1,0 +1,7 @@
+menuconfig CUSTOM_LED_SENSOR
+	bool "Custom GPIO LED Sensor"
+	default y
+	depends on DT_HAS_CUSTOM_LED_SENSOR_ENABLED
+	select GPIO
+	help
+	  Custom driver para un GPIO LED mediante un Sensor API.

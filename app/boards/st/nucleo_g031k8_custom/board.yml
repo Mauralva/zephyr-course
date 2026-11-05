@@ -1,0 +1,6 @@
+board:
+  name: nucleo_g031k8_custom
+  full_name: Customizada de Nucleo G031K8
+  vendor: Mauro
+  socs:
+    - name: stm32g031xx
