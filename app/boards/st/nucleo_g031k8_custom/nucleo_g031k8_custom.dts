@@ -32,6 +32,7 @@
 	my_led_sensor: led_sensor {
 		compatible = "custom,led-sensor";
 		gpios = <&gpioa 5 GPIO_ACTIVE_HIGH>;
+		init-delay-ms = <500>;
 		status = "okay";
 	};
 

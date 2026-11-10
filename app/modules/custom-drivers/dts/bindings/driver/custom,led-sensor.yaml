@@ -6,3 +6,7 @@ properties:
   gpios:
     type: phandle-array
     required: true
+  init-delay-ms:
+    type: int
+    default: 500
+    description: Valor inicial del delay del blink del led.
