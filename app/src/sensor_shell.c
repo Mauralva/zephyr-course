@@ -1,6 +1,7 @@
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/shell/shell.h>
+#include <errno.h>
 
 #include "custom_drivers/led_sensor.h"
 
@@ -66,11 +67,45 @@ static int cmd_sensor_info(const struct shell *sh, size_t argc, char **argv)
 	return 0;
 }
 
+/* sensor set — establece el retraso de parpadeo */
+static int cmd_sensor_set(const struct shell *sh, size_t argc, char **argv)
+{
+	if (!device_is_ready(sensor_dev)) {
+		shell_error(sh, "El dispositivo no esta listo: %s", sensor_dev->name);
+		return -ENODEV;
+	}
+
+	errno = 0;
+	int parse_err;
+	parse_err = 0;
+
+	unsigned long val = shell_strtoul(argv[argc - 1], 10, &parse_err);
+
+	if (parse_err != 0) {
+		shell_error(sh, "El valor '%s' no es un número", argv[argc - 1]);
+		return -EINVAL;
+	}
+	if (val == 0 || val > 60000) {
+		shell_error(sh, "El valor está fuera del rango (1..60000 ms)");
+		return -EINVAL;
+	}
+
+	int err = led_sensor_set_blink_delay(sensor_dev, (uint32_t)val);
+	if (err) {
+		shell_error(sh, "Error al establecer el retraso: %d", err);
+		return err;
+	}
+
+	shell_print(sh, "Retraso de parpadeo establecido en %lu ms", val);
+	return 0;
+}
+
 SHELL_STATIC_SUBCMD_SET_CREATE(
 	sub_sensor,
 	SHELL_CMD(fetch, NULL, "Fetch LED (prende LED)", cmd_sensor_fetch),
 	SHELL_CMD(read,  NULL, "Lee LED (apaga LED)", cmd_sensor_read),
 	SHELL_CMD(info,  NULL, "Nombre y estado del sensor", cmd_sensor_info),
+	SHELL_CMD_ARG(set, NULL, "Setear blink delay: sensor set <ms>", cmd_sensor_set, 2, 0),
 	SHELL_SUBCMD_SET_END
 );
 

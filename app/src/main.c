@@ -30,11 +30,15 @@ int main(void)
 	}
 
 	while (1) {
-		/* Tarea 1: fetch enciende, channel_get apaga */
+		/* Lesson 7 Task 2*/
+		uint32_t delay;
+		
+		led_sensor_get_blink_delay(dev, &delay);
+
 		sensor_sample_fetch(dev);
-		k_msleep(500);
+		k_msleep(delay);
 
 		sensor_channel_get(dev, SENSOR_CHAN_ALL, &val);
-		k_msleep(500);
+		k_msleep(delay);
 	}
 }
