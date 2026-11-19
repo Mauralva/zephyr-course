@@ -1,0 +1,335 @@
+2026-11-19 19:49:15,261 - twister - INFO - Using Ninja..
+2026-11-19 19:49:16,175 - twister - INFO - Zephyr version: v4.2.0
+2026-11-19 19:49:16,178 - twister - DEBUG - Running cmake script /home/mauro/IOMICO/deps/zephyr/cmake/verify-toolchain.cmake
+2026-11-19 19:49:16,178 - twister - DEBUG - Calling cmake: /usr/bin/cmake -DFORMAT=json -P /home/mauro/IOMICO/deps/zephyr/cmake/verify-toolchain.cmake
+2026-11-19 19:49:22,238 - twister - DEBUG - Finished running /home/mauro/IOMICO/deps/zephyr/cmake/verify-toolchain.cmake
+2026-11-19 19:49:22,238 - twister - INFO - Using 'zephyr' toolchain.
+2026-11-19 19:49:33,023 - twister - DEBUG - Reading testsuite configuration files under /home/mauro/IOMICO/zephyr-course/tests/ring_buf...
+2026-11-19 19:49:33,023 - twister - DEBUG - Found possible testsuite in /home/mauro/IOMICO/zephyr-course/tests/ring_buf
+2026-11-19 19:49:33,038 - twister - DEBUG - No duplicates found.
+2026-11-19 19:49:33,039 - twister - DEBUG - platform filter: ['native_sim']
+2026-11-19 19:49:33,039 - twister - DEBUG -   vendor filter: []
+2026-11-19 19:49:33,039 - twister - DEBUG -     arch_filter: None
+2026-11-19 19:49:33,039 - twister - DEBUG -      tag_filter: None
+2026-11-19 19:49:33,039 - twister - DEBUG -     exclude_tag: None
+2026-11-19 19:49:33,039 - twister - DEBUG - Checking platform filter: ['native_sim']
+2026-11-19 19:49:33,039 - twister - INFO - Building initial testsuite list...
+2026-11-19 19:49:33,075 - twister - INFO - Writing JSON report /home/mauro/IOMICO/zephyr-course/twister-out/testplan.json
+2026-11-19 19:49:33,141 - twister - INFO - JOBS: 8
+2026-11-19 19:49:33,142 - twister - INFO - Adding tasks to the queue...
+2026-11-19 19:49:33,142 - twister - DEBUG - adding native_sim/native/host/homework.unit.ring_buf
+2026-11-19 19:49:33,145 - twister - INFO - Added initial list of jobs to queue
+2026-11-19 19:49:33,158 - twister - DEBUG - Running cmake on /home/mauro/IOMICO/zephyr-course/tests/ring_buf for native_sim/native
+2026-11-19 19:49:33,160 - twister - DEBUG - Calling cmake: /usr/bin/cmake -B/home/mauro/IOMICO/zephyr-course/twister-out/native_sim_native/host/homework.unit.ring_buf -DTC_RUNID=00f1fcdd18eec8ce03c05e678daf40c4 -DTC_NAME=homework.unit.ring_buf -DCONFIG_COMPILER_WARNINGS_AS_ERRORS=y -DEXTRA_GEN_EDT_ARGS=--edtlib-Werror -GNinja -DPython3_EXECUTABLE=/home/mauro/zephyrproject/.venv/bin/python3 -DZEPHYR_TOOLCHAIN_VARIANT=host -S/home/mauro/IOMICO/zephyr-course/tests/ring_buf -DBOARD=native_sim/native
+2026-11-19 19:49:33,173 - twister - DEBUG - Launched 8 jobs
+2026-11-19 19:49:58,825 - twister - DEBUG - Finished running cmake /home/mauro/IOMICO/zephyr-course/tests/ring_buf for native_sim/native in 25.66 seconds
+2026-11-19 19:49:58,829 - twister - DEBUG - build test: native_sim/native/host/homework.unit.ring_buf
+2026-11-19 19:49:58,829 - twister - DEBUG - Building /home/mauro/IOMICO/zephyr-course/tests/ring_buf for native_sim/native
+2026-11-19 19:49:58,830 - twister - DEBUG - Running /usr/bin/cmake --build /home/mauro/IOMICO/zephyr-course/twister-out/native_sim_native/host/homework.unit.ring_buf
+2026-11-19 19:50:05,710 - twister - DEBUG - Finished building /home/mauro/IOMICO/zephyr-course/tests/ring_buf for native_sim/native in 6.88 seconds
+2026-11-19 19:50:05,710 - twister - DEBUG - Determine test cases for test instance: native_sim/native/host/homework.unit.ring_buf
+2026-11-19 19:50:05,710 - twister - DEBUG - Determine test cases for test suite: homework.unit.ring_buf
+2026-11-19 19:50:05,749 - twister - DEBUG - Test instance native_sim/native/host/homework.unit.ring_buf already has 8 testcase(s) known: [<TestCase homework.unit.ring_buf.ring_buf_init.reinit_clears_state with None>, <TestCase homework.unit.ring_buf.ring_buf_push_pop.single_push_pop with None>, <TestCase homework.unit.ring_buf.ring_buf_boundaries.peek_does_not_consume with None>, <TestCase homework.unit.ring_buf.ring_buf_boundaries.pop_null_returns_einval with None>, <TestCase homework.unit.ring_buf.ring_buf_boundaries.is_full_after_fill with None>, <TestCase homework.unit.ring_buf.ring_buf_push_pop.fifo_order with None>, <TestCase homework.unit.ring_buf.ring_buf_init.fresh_state with None>, <TestCase homework.unit.ring_buf.ring_buf_push_pop.push_full_returns_enospc with None>]
+2026-11-19 19:50:05,749 - twister - DEBUG - Detected 8 Ztest case(s): [homework.unit.ring_buf.ring_buf_boundaries.is_full_after_fill, homework.unit.ring_buf.ring_buf_boundaries.pop_null_returns_einval, homework.unit.ring_buf.ring_buf_boundaries.peek_does_not_consume, homework.unit.ring_buf.ring_buf_push_pop.push_full_returns_enospc, homework.unit.ring_buf.ring_buf_push_pop.fifo_order, homework.unit.ring_buf.ring_buf_push_pop.single_push_pop, homework.unit.ring_buf.ring_buf_init.reinit_clears_state, homework.unit.ring_buf.ring_buf_init.fresh_state] in /home/mauro/IOMICO/zephyr-course/twister-out/native_sim_native/host/homework.unit.ring_buf/zephyr/zephyr.elf
+2026-11-19 19:50:05,753 - twister - DEBUG - run test: native_sim/native/host/homework.unit.ring_buf
+2026-11-19 19:50:05,753 - twister - DEBUG - Reset instance status from 'passed' to None before run.
+2026-11-19 19:50:05,753 - twister - DEBUG - Spawning process: /home/mauro/IOMICO/zephyr-course/twister-out/native_sim_native/host/homework.unit.ring_buf/zephyr/zephyr.exe
+in directory: /home/mauro/IOMICO/zephyr-course/twister-out/native_sim_native/host/homework.unit.ring_buf
+2026-11-19 19:50:05,754 - twister - DEBUG - Spawning BinaryHandler Thread for native_sim/native/host/homework.unit.ring_buf
+2026-11-19 19:50:05,775 - twister - DEBUG - OUTPUT: *** Booting Zephyr OS build v4.2.0 ***
+2026-11-19 19:50:05,776 - twister - DEBUG - OUTPUT: Running TESTSUITE ring_buf_boundaries
+2026-11-19 19:50:05,776 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,777 - twister - DEBUG - OUTPUT: START - test_pop_null_returns_einval
+2026-11-19 19:50:05,777 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> ring_buf: value pointer is NULL[0m
+2026-11-19 19:50:05,778 - twister - DEBUG - OUTPUT:  PASS - test_pop_null_returns_einval in 0.000 seconds
+2026-11-19 19:50:05,778 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,779 - twister - DEBUG - OUTPUT: START - test_is_full_after_fill
+2026-11-19 19:50:05,779 - twister - DEBUG - OUTPUT:  PASS - test_is_full_after_fill in 0.000 seconds
+2026-11-19 19:50:05,780 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,780 - twister - DEBUG - OUTPUT: START - test_peek_does_not_consume
+2026-11-19 19:50:05,781 - twister - DEBUG - OUTPUT:  PASS - test_peek_does_not_consume in 0.000 seconds
+2026-11-19 19:50:05,781 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,782 - twister - DEBUG - OUTPUT: START - test_peek_does_not_consume
+2026-11-19 19:50:05,782 - twister - DEBUG - OUTPUT:  PASS - test_peek_does_not_consume in 0.000 seconds
+2026-11-19 19:50:05,783 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,783 - twister - DEBUG - OUTPUT: START - test_is_full_after_fill
+2026-11-19 19:50:05,783 - twister - DEBUG - OUTPUT:  PASS - test_is_full_after_fill in 0.000 seconds
+2026-11-19 19:50:05,784 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,785 - twister - DEBUG - OUTPUT: START - test_pop_null_returns_einval
+2026-11-19 19:50:05,785 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> ring_buf: value pointer is NULL[0m
+2026-11-19 19:50:05,786 - twister - DEBUG - OUTPUT:  PASS - test_pop_null_returns_einval in 0.000 seconds
+2026-11-19 19:50:05,786 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,787 - twister - DEBUG - OUTPUT: START - test_peek_does_not_consume
+2026-11-19 19:50:05,787 - twister - DEBUG - OUTPUT:  PASS - test_peek_does_not_consume in 0.000 seconds
+2026-11-19 19:50:05,787 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,788 - twister - DEBUG - OUTPUT: START - test_pop_null_returns_einval
+2026-11-19 19:50:05,788 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> ring_buf: value pointer is NULL[0m
+2026-11-19 19:50:05,789 - twister - DEBUG - OUTPUT:  PASS - test_pop_null_returns_einval in 0.000 seconds
+2026-11-19 19:50:05,789 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,790 - twister - DEBUG - OUTPUT: START - test_is_full_after_fill
+2026-11-19 19:50:05,790 - twister - DEBUG - OUTPUT:  PASS - test_is_full_after_fill in 0.000 seconds
+2026-11-19 19:50:05,791 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,791 - twister - DEBUG - OUTPUT: TESTSUITE ring_buf_boundaries succeeded
+2026-11-19 19:50:05,792 - twister - DEBUG - OUTPUT: Running TESTSUITE ring_buf_boundaries
+2026-11-19 19:50:05,792 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,793 - twister - DEBUG - OUTPUT: START - test_peek_does_not_consume
+2026-11-19 19:50:05,793 - twister - DEBUG - OUTPUT:  PASS - test_peek_does_not_consume in 0.000 seconds
+2026-11-19 19:50:05,793 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,794 - twister - DEBUG - OUTPUT: START - test_is_full_after_fill
+2026-11-19 19:50:05,794 - twister - DEBUG - OUTPUT:  PASS - test_is_full_after_fill in 0.000 seconds
+2026-11-19 19:50:05,795 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,795 - twister - DEBUG - OUTPUT: START - test_pop_null_returns_einval
+2026-11-19 19:50:05,796 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> ring_buf: value pointer is NULL[0m
+2026-11-19 19:50:05,796 - twister - DEBUG - OUTPUT:  PASS - test_pop_null_returns_einval in 0.000 seconds
+2026-11-19 19:50:05,796 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,797 - twister - DEBUG - OUTPUT: START - test_peek_does_not_consume
+2026-11-19 19:50:05,797 - twister - DEBUG - OUTPUT:  PASS - test_peek_does_not_consume in 0.000 seconds
+2026-11-19 19:50:05,798 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,798 - twister - DEBUG - OUTPUT: START - test_is_full_after_fill
+2026-11-19 19:50:05,798 - twister - DEBUG - OUTPUT:  PASS - test_is_full_after_fill in 0.000 seconds
+2026-11-19 19:50:05,799 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,799 - twister - DEBUG - OUTPUT: START - test_pop_null_returns_einval
+2026-11-19 19:50:05,800 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> ring_buf: value pointer is NULL[0m
+2026-11-19 19:50:05,800 - twister - DEBUG - OUTPUT:  PASS - test_pop_null_returns_einval in 0.000 seconds
+2026-11-19 19:50:05,801 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,801 - twister - DEBUG - OUTPUT: START - test_is_full_after_fill
+2026-11-19 19:50:05,801 - twister - DEBUG - OUTPUT:  PASS - test_is_full_after_fill in 0.000 seconds
+2026-11-19 19:50:05,802 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,802 - twister - DEBUG - OUTPUT: START - test_peek_does_not_consume
+2026-11-19 19:50:05,803 - twister - DEBUG - OUTPUT:  PASS - test_peek_does_not_consume in 0.000 seconds
+2026-11-19 19:50:05,803 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,803 - twister - DEBUG - OUTPUT: START - test_pop_null_returns_einval
+2026-11-19 19:50:05,804 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> ring_buf: value pointer is NULL[0m
+2026-11-19 19:50:05,804 - twister - DEBUG - OUTPUT:  PASS - test_pop_null_returns_einval in 0.000 seconds
+2026-11-19 19:50:05,805 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,805 - twister - DEBUG - OUTPUT: TESTSUITE ring_buf_boundaries succeeded
+2026-11-19 19:50:05,806 - twister - DEBUG - OUTPUT: Running TESTSUITE ring_buf_boundaries
+2026-11-19 19:50:05,806 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,806 - twister - DEBUG - OUTPUT: START - test_is_full_after_fill
+2026-11-19 19:50:05,807 - twister - DEBUG - OUTPUT:  PASS - test_is_full_after_fill in 0.000 seconds
+2026-11-19 19:50:05,807 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,808 - twister - DEBUG - OUTPUT: START - test_peek_does_not_consume
+2026-11-19 19:50:05,808 - twister - DEBUG - OUTPUT:  PASS - test_peek_does_not_consume in 0.000 seconds
+2026-11-19 19:50:05,808 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,808 - twister - DEBUG - OUTPUT: START - test_pop_null_returns_einval
+2026-11-19 19:50:05,809 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> ring_buf: value pointer is NULL[0m
+2026-11-19 19:50:05,809 - twister - DEBUG - OUTPUT:  PASS - test_pop_null_returns_einval in 0.000 seconds
+2026-11-19 19:50:05,809 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,810 - twister - DEBUG - OUTPUT: START - test_peek_does_not_consume
+2026-11-19 19:50:05,810 - twister - DEBUG - OUTPUT:  PASS - test_peek_does_not_consume in 0.000 seconds
+2026-11-19 19:50:05,810 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,810 - twister - DEBUG - OUTPUT: START - test_pop_null_returns_einval
+2026-11-19 19:50:05,811 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> ring_buf: value pointer is NULL[0m
+2026-11-19 19:50:05,811 - twister - DEBUG - OUTPUT:  PASS - test_pop_null_returns_einval in 0.000 seconds
+2026-11-19 19:50:05,811 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,812 - twister - DEBUG - OUTPUT: START - test_is_full_after_fill
+2026-11-19 19:50:05,812 - twister - DEBUG - OUTPUT:  PASS - test_is_full_after_fill in 0.000 seconds
+2026-11-19 19:50:05,812 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,813 - twister - DEBUG - OUTPUT: START - test_peek_does_not_consume
+2026-11-19 19:50:05,813 - twister - DEBUG - OUTPUT:  PASS - test_peek_does_not_consume in 0.000 seconds
+2026-11-19 19:50:05,813 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,814 - twister - DEBUG - OUTPUT: START - test_pop_null_returns_einval
+2026-11-19 19:50:05,814 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> ring_buf: value pointer is NULL[0m
+2026-11-19 19:50:05,814 - twister - DEBUG - OUTPUT:  PASS - test_pop_null_returns_einval in 0.000 seconds
+2026-11-19 19:50:05,815 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,815 - twister - DEBUG - OUTPUT: START - test_is_full_after_fill
+2026-11-19 19:50:05,816 - twister - DEBUG - OUTPUT:  PASS - test_is_full_after_fill in 0.000 seconds
+2026-11-19 19:50:05,816 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,816 - twister - DEBUG - OUTPUT: TESTSUITE ring_buf_boundaries succeeded
+2026-11-19 19:50:05,817 - twister - DEBUG - OUTPUT: Running TESTSUITE ring_buf_init
+2026-11-19 19:50:05,817 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,817 - twister - DEBUG - OUTPUT: START - test_reinit_clears_state
+2026-11-19 19:50:05,818 - twister - DEBUG - OUTPUT:  PASS - test_reinit_clears_state in 0.000 seconds
+2026-11-19 19:50:05,818 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,819 - twister - DEBUG - OUTPUT: START - test_fresh_state
+2026-11-19 19:50:05,819 - twister - DEBUG - OUTPUT:  PASS - test_fresh_state in 0.000 seconds
+2026-11-19 19:50:05,819 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,820 - twister - DEBUG - OUTPUT: START - test_reinit_clears_state
+2026-11-19 19:50:05,820 - twister - DEBUG - OUTPUT:  PASS - test_reinit_clears_state in 0.000 seconds
+2026-11-19 19:50:05,821 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,821 - twister - DEBUG - OUTPUT: START - test_fresh_state
+2026-11-19 19:50:05,821 - twister - DEBUG - OUTPUT:  PASS - test_fresh_state in 0.000 seconds
+2026-11-19 19:50:05,822 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,822 - twister - DEBUG - OUTPUT: START - test_reinit_clears_state
+2026-11-19 19:50:05,822 - twister - DEBUG - OUTPUT:  PASS - test_reinit_clears_state in 0.000 seconds
+2026-11-19 19:50:05,823 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,823 - twister - DEBUG - OUTPUT: START - test_fresh_state
+2026-11-19 19:50:05,823 - twister - DEBUG - OUTPUT:  PASS - test_fresh_state in 0.000 seconds
+2026-11-19 19:50:05,824 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,824 - twister - DEBUG - OUTPUT: TESTSUITE ring_buf_init succeeded
+2026-11-19 19:50:05,824 - twister - DEBUG - OUTPUT: Running TESTSUITE ring_buf_init
+2026-11-19 19:50:05,824 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,825 - twister - DEBUG - OUTPUT: START - test_fresh_state
+2026-11-19 19:50:05,825 - twister - DEBUG - OUTPUT:  PASS - test_fresh_state in 0.000 seconds
+2026-11-19 19:50:05,825 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,825 - twister - DEBUG - OUTPUT: START - test_reinit_clears_state
+2026-11-19 19:50:05,826 - twister - DEBUG - OUTPUT:  PASS - test_reinit_clears_state in 0.000 seconds
+2026-11-19 19:50:05,826 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,826 - twister - DEBUG - OUTPUT: START - test_fresh_state
+2026-11-19 19:50:05,827 - twister - DEBUG - OUTPUT:  PASS - test_fresh_state in 0.000 seconds
+2026-11-19 19:50:05,827 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,827 - twister - DEBUG - OUTPUT: START - test_reinit_clears_state
+2026-11-19 19:50:05,828 - twister - DEBUG - OUTPUT:  PASS - test_reinit_clears_state in 0.000 seconds
+2026-11-19 19:50:05,828 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,828 - twister - DEBUG - OUTPUT: START - test_reinit_clears_state
+2026-11-19 19:50:05,828 - twister - DEBUG - OUTPUT:  PASS - test_reinit_clears_state in 0.000 seconds
+2026-11-19 19:50:05,829 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,829 - twister - DEBUG - OUTPUT: START - test_fresh_state
+2026-11-19 19:50:05,829 - twister - DEBUG - OUTPUT:  PASS - test_fresh_state in 0.000 seconds
+2026-11-19 19:50:05,830 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,830 - twister - DEBUG - OUTPUT: TESTSUITE ring_buf_init succeeded
+2026-11-19 19:50:05,830 - twister - DEBUG - OUTPUT: Running TESTSUITE ring_buf_init
+2026-11-19 19:50:05,831 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,831 - twister - DEBUG - OUTPUT: START - test_fresh_state
+2026-11-19 19:50:05,831 - twister - DEBUG - OUTPUT:  PASS - test_fresh_state in 0.000 seconds
+2026-11-19 19:50:05,831 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,832 - twister - DEBUG - OUTPUT: START - test_reinit_clears_state
+2026-11-19 19:50:05,832 - twister - DEBUG - OUTPUT:  PASS - test_reinit_clears_state in 0.000 seconds
+2026-11-19 19:50:05,832 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,833 - twister - DEBUG - OUTPUT: START - test_fresh_state
+2026-11-19 19:50:05,833 - twister - DEBUG - OUTPUT:  PASS - test_fresh_state in 0.000 seconds
+2026-11-19 19:50:05,833 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,834 - twister - DEBUG - OUTPUT: START - test_reinit_clears_state
+2026-11-19 19:50:05,834 - twister - DEBUG - OUTPUT:  PASS - test_reinit_clears_state in 0.000 seconds
+2026-11-19 19:50:05,834 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,835 - twister - DEBUG - OUTPUT: START - test_reinit_clears_state
+2026-11-19 19:50:05,835 - twister - DEBUG - OUTPUT:  PASS - test_reinit_clears_state in 0.000 seconds
+2026-11-19 19:50:05,836 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,836 - twister - DEBUG - OUTPUT: START - test_fresh_state
+2026-11-19 19:50:05,836 - twister - DEBUG - OUTPUT:  PASS - test_fresh_state in 0.000 seconds
+2026-11-19 19:50:05,837 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,837 - twister - DEBUG - OUTPUT: TESTSUITE ring_buf_init succeeded
+2026-11-19 19:50:05,837 - twister - DEBUG - OUTPUT: Running TESTSUITE ring_buf_push_pop
+2026-11-19 19:50:05,838 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,838 - twister - DEBUG - OUTPUT: START - test_push_full_returns_enospc
+2026-11-19 19:50:05,838 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> ring_buf: buffer full (capacity=4)[0m
+2026-11-19 19:50:05,839 - twister - DEBUG - OUTPUT:  PASS - test_push_full_returns_enospc in 0.000 seconds
+2026-11-19 19:50:05,839 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,840 - twister - DEBUG - OUTPUT: START - test_single_push_pop
+2026-11-19 19:50:05,840 - twister - DEBUG - OUTPUT:  PASS - test_single_push_pop in 0.000 seconds
+2026-11-19 19:50:05,840 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,841 - twister - DEBUG - OUTPUT: START - test_fifo_order
+2026-11-19 19:50:05,841 - twister - DEBUG - OUTPUT:  PASS - test_fifo_order in 0.000 seconds
+2026-11-19 19:50:05,841 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,841 - twister - DEBUG - OUTPUT: START - test_push_full_returns_enospc
+2026-11-19 19:50:05,842 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> ring_buf: buffer full (capacity=4)[0m
+2026-11-19 19:50:05,842 - twister - DEBUG - OUTPUT:  PASS - test_push_full_returns_enospc in 0.000 seconds
+2026-11-19 19:50:05,842 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,843 - twister - DEBUG - OUTPUT: START - test_fifo_order
+2026-11-19 19:50:05,843 - twister - DEBUG - OUTPUT:  PASS - test_fifo_order in 0.000 seconds
+2026-11-19 19:50:05,843 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,844 - twister - DEBUG - OUTPUT: START - test_single_push_pop
+2026-11-19 19:50:05,844 - twister - DEBUG - OUTPUT:  PASS - test_single_push_pop in 0.000 seconds
+2026-11-19 19:50:05,844 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,845 - twister - DEBUG - OUTPUT: START - test_single_push_pop
+2026-11-19 19:50:05,845 - twister - DEBUG - OUTPUT:  PASS - test_single_push_pop in 0.000 seconds
+2026-11-19 19:50:05,845 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,846 - twister - DEBUG - OUTPUT: START - test_push_full_returns_enospc
+2026-11-19 19:50:05,846 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> ring_buf: buffer full (capacity=4)[0m
+2026-11-19 19:50:05,846 - twister - DEBUG - OUTPUT:  PASS - test_push_full_returns_enospc in 0.000 seconds
+2026-11-19 19:50:05,847 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,847 - twister - DEBUG - OUTPUT: START - test_fifo_order
+2026-11-19 19:50:05,847 - twister - DEBUG - OUTPUT:  PASS - test_fifo_order in 0.000 seconds
+2026-11-19 19:50:05,848 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,848 - twister - DEBUG - OUTPUT: TESTSUITE ring_buf_push_pop succeeded
+2026-11-19 19:50:05,848 - twister - DEBUG - OUTPUT: Running TESTSUITE ring_buf_push_pop
+2026-11-19 19:50:05,848 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,849 - twister - DEBUG - OUTPUT: START - test_push_full_returns_enospc
+2026-11-19 19:50:05,849 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> ring_buf: buffer full (capacity=4)[0m
+2026-11-19 19:50:05,849 - twister - DEBUG - OUTPUT:  PASS - test_push_full_returns_enospc in 0.000 seconds
+2026-11-19 19:50:05,850 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,850 - twister - DEBUG - OUTPUT: START - test_single_push_pop
+2026-11-19 19:50:05,850 - twister - DEBUG - OUTPUT:  PASS - test_single_push_pop in 0.000 seconds
+2026-11-19 19:50:05,851 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,851 - twister - DEBUG - OUTPUT: START - test_fifo_order
+2026-11-19 19:50:05,851 - twister - DEBUG - OUTPUT:  PASS - test_fifo_order in 0.000 seconds
+2026-11-19 19:50:05,852 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,852 - twister - DEBUG - OUTPUT: START - test_fifo_order
+2026-11-19 19:50:05,852 - twister - DEBUG - OUTPUT:  PASS - test_fifo_order in 0.000 seconds
+2026-11-19 19:50:05,853 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,853 - twister - DEBUG - OUTPUT: START - test_push_full_returns_enospc
+2026-11-19 19:50:05,853 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> ring_buf: buffer full (capacity=4)[0m
+2026-11-19 19:50:05,854 - twister - DEBUG - OUTPUT:  PASS - test_push_full_returns_enospc in 0.000 seconds
+2026-11-19 19:50:05,854 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,854 - twister - DEBUG - OUTPUT: START - test_single_push_pop
+2026-11-19 19:50:05,855 - twister - DEBUG - OUTPUT:  PASS - test_single_push_pop in 0.000 seconds
+2026-11-19 19:50:05,855 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,856 - twister - DEBUG - OUTPUT: START - test_fifo_order
+2026-11-19 19:50:05,856 - twister - DEBUG - OUTPUT:  PASS - test_fifo_order in 0.000 seconds
+2026-11-19 19:50:05,856 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,856 - twister - DEBUG - OUTPUT: START - test_push_full_returns_enospc
+2026-11-19 19:50:05,857 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> ring_buf: buffer full (capacity=4)[0m
+2026-11-19 19:50:05,857 - twister - DEBUG - OUTPUT:  PASS - test_push_full_returns_enospc in 0.000 seconds
+2026-11-19 19:50:05,857 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,858 - twister - DEBUG - OUTPUT: START - test_single_push_pop
+2026-11-19 19:50:05,858 - twister - DEBUG - OUTPUT:  PASS - test_single_push_pop in 0.000 seconds
+2026-11-19 19:50:05,858 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,859 - twister - DEBUG - OUTPUT: TESTSUITE ring_buf_push_pop succeeded
+2026-11-19 19:50:05,859 - twister - DEBUG - OUTPUT: Running TESTSUITE ring_buf_push_pop
+2026-11-19 19:50:05,859 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,860 - twister - DEBUG - OUTPUT: START - test_single_push_pop
+2026-11-19 19:50:05,860 - twister - DEBUG - OUTPUT:  PASS - test_single_push_pop in 0.000 seconds
+2026-11-19 19:50:05,860 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,860 - twister - DEBUG - OUTPUT: START - test_fifo_order
+2026-11-19 19:50:05,861 - twister - DEBUG - OUTPUT:  PASS - test_fifo_order in 0.000 seconds
+2026-11-19 19:50:05,861 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,861 - twister - DEBUG - OUTPUT: START - test_push_full_returns_enospc
+2026-11-19 19:50:05,862 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> ring_buf: buffer full (capacity=4)[0m
+2026-11-19 19:50:05,862 - twister - DEBUG - OUTPUT:  PASS - test_push_full_returns_enospc in 0.000 seconds
+2026-11-19 19:50:05,862 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,863 - twister - DEBUG - OUTPUT: START - test_single_push_pop
+2026-11-19 19:50:05,863 - twister - DEBUG - OUTPUT:  PASS - test_single_push_pop in 0.000 seconds
+2026-11-19 19:50:05,863 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,863 - twister - DEBUG - OUTPUT: START - test_push_full_returns_enospc
+2026-11-19 19:50:05,864 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> ring_buf: buffer full (capacity=4)[0m
+2026-11-19 19:50:05,864 - twister - DEBUG - OUTPUT:  PASS - test_push_full_returns_enospc in 0.000 seconds
+2026-11-19 19:50:05,864 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,865 - twister - DEBUG - OUTPUT: START - test_fifo_order
+2026-11-19 19:50:05,865 - twister - DEBUG - OUTPUT:  PASS - test_fifo_order in 0.000 seconds
+2026-11-19 19:50:05,865 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,866 - twister - DEBUG - OUTPUT: START - test_single_push_pop
+2026-11-19 19:50:05,866 - twister - DEBUG - OUTPUT:  PASS - test_single_push_pop in 0.000 seconds
+2026-11-19 19:50:05,866 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,867 - twister - DEBUG - OUTPUT: START - test_push_full_returns_enospc
+2026-11-19 19:50:05,867 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> ring_buf: buffer full (capacity=4)[0m
+2026-11-19 19:50:05,867 - twister - DEBUG - OUTPUT:  PASS - test_push_full_returns_enospc in 0.000 seconds
+2026-11-19 19:50:05,868 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,868 - twister - DEBUG - OUTPUT: START - test_fifo_order
+2026-11-19 19:50:05,868 - twister - DEBUG - OUTPUT:  PASS - test_fifo_order in 0.000 seconds
+2026-11-19 19:50:05,869 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,869 - twister - DEBUG - OUTPUT: TESTSUITE ring_buf_push_pop succeeded
+2026-11-19 19:50:05,869 - twister - DEBUG - OUTPUT: 
+2026-11-19 19:50:05,870 - twister - DEBUG - OUTPUT: ------ TESTSUITE SUMMARY START ------
+2026-11-19 19:50:05,870 - twister - DEBUG - OUTPUT: 
+2026-11-19 19:50:05,870 - twister - DEBUG - OUTPUT: SUITE PASS - 100.00% [ring_buf_boundaries]: pass = 3, fail = 0, skip = 0, total = 3 duration = 0.000 seconds
+2026-11-19 19:50:05,871 - twister - DEBUG - OUTPUT:  - PASS - [ring_buf_boundaries.test_is_full_after_fill] duration = 0.000 seconds
+2026-11-19 19:50:05,871 - twister - DEBUG - OUTPUT:  - PASS - [ring_buf_boundaries.test_peek_does_not_consume] duration = 0.000 seconds
+2026-11-19 19:50:05,872 - twister - DEBUG - OUTPUT:  - PASS - [ring_buf_boundaries.test_pop_null_returns_einval] duration = 0.000 seconds
+2026-11-19 19:50:05,872 - twister - DEBUG - OUTPUT: 
+2026-11-19 19:50:05,872 - twister - DEBUG - OUTPUT: SUITE PASS - 100.00% [ring_buf_init]: pass = 2, fail = 0, skip = 0, total = 2 duration = 0.000 seconds
+2026-11-19 19:50:05,872 - twister - DEBUG - OUTPUT:  - PASS - [ring_buf_init.test_fresh_state] duration = 0.000 seconds
+2026-11-19 19:50:05,873 - twister - DEBUG - OUTPUT:  - PASS - [ring_buf_init.test_reinit_clears_state] duration = 0.000 seconds
+2026-11-19 19:50:05,873 - twister - DEBUG - OUTPUT: 
+2026-11-19 19:50:05,873 - twister - DEBUG - OUTPUT: SUITE PASS - 100.00% [ring_buf_push_pop]: pass = 3, fail = 0, skip = 0, total = 3 duration = 0.000 seconds
+2026-11-19 19:50:05,874 - twister - DEBUG - OUTPUT:  - PASS - [ring_buf_push_pop.test_fifo_order] duration = 0.000 seconds
+2026-11-19 19:50:05,874 - twister - DEBUG - OUTPUT:  - PASS - [ring_buf_push_pop.test_push_full_returns_enospc] duration = 0.000 seconds
+2026-11-19 19:50:05,874 - twister - DEBUG - OUTPUT:  - PASS - [ring_buf_push_pop.test_single_push_pop] duration = 0.000 seconds
+2026-11-19 19:50:05,874 - twister - DEBUG - OUTPUT: 
+2026-11-19 19:50:05,875 - twister - DEBUG - OUTPUT: ------ TESTSUITE SUMMARY END ------
+2026-11-19 19:50:05,875 - twister - DEBUG - OUTPUT: 
+2026-11-19 19:50:05,875 - twister - DEBUG - OUTPUT: ===================================================================
+2026-11-19 19:50:05,876 - twister - DEBUG - OUTPUT: RunID: 00f1fcdd18eec8ce03c05e678daf40c4
+2026-11-19 19:50:05,876 - twister - DEBUG - OUTPUT: PROJECT EXECUTION SUCCESSFUL
+2026-11-19 19:50:05,880 - twister - DEBUG - Expected suite names:['ring_buf_init', 'ring_buf_push_pop', 'ring_buf_boundaries']
+2026-11-19 19:50:05,881 - twister - DEBUG - Detected suite names:['ring_buf_boundaries', 'ring_buf_init', 'ring_buf_push_pop']
+2026-11-19 19:50:05,881 - twister - DEBUG - run status: native_sim/native/host/homework.unit.ring_buf passed
+2026-11-19 19:50:05,884 - twister - INFO - 1/1 native_sim/native         homework.unit.ring_buf                             [32mPASSED[39m (native 0.123s <host>)
+2026-11-19 19:50:05,892 - twister - INFO - 1 test scenarios (1 configurations) selected, 0 configurations filtered (0 by static filter, 0 at runtime).
+2026-11-19 19:50:05,899 - twister - INFO - [32m1 of 1[39m executed test configurations passed (100.00%), 0 built (not run), 0 failed, 0 errored, with no warnings in 50.64 seconds.
+2026-11-19 19:50:05,900 - twister - INFO - 8 of 8 executed test cases passed (100.00%) on 1 out of total 1115 platforms (0.09%).
+2026-11-19 19:50:05,900 - twister - INFO - [32m1[39m test configurations executed on platforms, [36m0[39m test configurations were only built.
+2026-11-19 19:50:05,900 - twister - INFO - Saving reports...
+2026-11-19 19:50:05,900 - twister - INFO - Writing JSON report /home/mauro/IOMICO/zephyr-course/twister-out/twister.json
+2026-11-19 19:50:05,901 - twister - INFO - Writing xunit report /home/mauro/IOMICO/zephyr-course/twister-out/twister.xml...
+2026-11-19 19:50:05,918 - twister - INFO - Writing xunit report /home/mauro/IOMICO/zephyr-course/twister-out/twister_report.xml...
+2026-11-19 19:50:05,919 - twister - INFO - Run completed
