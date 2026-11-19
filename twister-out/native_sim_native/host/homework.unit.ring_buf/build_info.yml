@@ -31,9 +31,12 @@ cmake:
      - '/home/mauro/IOMICO/deps/zephyr/dts/arc'
      - '/home/mauro/IOMICO/deps/zephyr/dts'
   kconfig:
+    extra-user-files:
+     - '/home/mauro/IOMICO/zephyr-course/twister-out/native_sim_native/host/homework.unit.ring_buf/twister/testsuite_extra.conf'
     files:
      - '/home/mauro/IOMICO/deps/zephyr/boards/native/native_sim/native_sim_defconfig'
      - '/home/mauro/IOMICO/zephyr-course/tests/ring_buf/prj.conf'
+     - '/home/mauro/IOMICO/zephyr-course/twister-out/native_sim_native/host/homework.unit.ring_buf/twister/testsuite_extra.conf'
      - '/home/mauro/IOMICO/zephyr-course/twister-out/native_sim_native/host/homework.unit.ring_buf/zephyr/misc/generated/extra_kconfig_options.conf'
     user-files:
      - '/home/mauro/IOMICO/zephyr-course/tests/ring_buf/prj.conf'

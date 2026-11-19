@@ -1,0 +1,4 @@
+"cmsis_6":"/home/mauro/IOMICO/deps/modules/hal/cmsis_6":"${ZEPHYR_CMSIS_6_CMAKE_DIR}"
+"hal_espressif":"/home/mauro/IOMICO/deps/modules/hal/espressif":"/home/mauro/IOMICO/deps/modules/hal/espressif/zephyr"
+"hal_nxp":"/home/mauro/IOMICO/deps/modules/hal/nxp":"${ZEPHYR_HAL_NXP_CMAKE_DIR}"
+"hal_stm32":"/home/mauro/IOMICO/deps/modules/hal/stm32":"/home/mauro/IOMICO/deps/modules/hal/stm32"

@@ -1,0 +1,46 @@
+cmake:
+  application:
+    configuration-dir: '/home/mauro/IOMICO/zephyr-course/tests/ring_buf'
+    source-dir: '/home/mauro/IOMICO/zephyr-course/tests/ring_buf'
+  board:
+    name: 'native_sim'
+    path:
+     - '/home/mauro/IOMICO/deps/zephyr/boards/native/native_sim'
+    qualifiers: 'native'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/mauro/IOMICO/deps/zephyr/dts/bindings'
+    files:
+     - '/home/mauro/IOMICO/deps/zephyr/boards/native/native_sim/native_sim.dts'
+    include-dirs:
+     - '/home/mauro/IOMICO/deps/modules/hal/nxp/dts'
+     - '/home/mauro/IOMICO/deps/modules/hal/stm32/dts'
+     - '/home/mauro/IOMICO/deps/zephyr/include'
+     - '/home/mauro/IOMICO/deps/zephyr/include/zephyr'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/common'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/vendor'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/rx'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/x86'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/xtensa'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/sparc'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/riscv'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/posix'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/arm64'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/arm'
+     - '/home/mauro/IOMICO/deps/zephyr/dts/arc'
+     - '/home/mauro/IOMICO/deps/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/mauro/IOMICO/deps/zephyr/boards/native/native_sim/native_sim_defconfig'
+     - '/home/mauro/IOMICO/zephyr-course/tests/ring_buf/prj.conf'
+     - '/home/mauro/IOMICO/zephyr-course/twister-out/native_sim_native/host/homework.unit.ring_buf/zephyr/misc/generated/extra_kconfig_options.conf'
+    user-files:
+     - '/home/mauro/IOMICO/zephyr-course/tests/ring_buf/prj.conf'
+  toolchain:
+    name: 'host'
+    path: ''
+  zephyr:
+    version: '4.2.0'
+    zephyr-base: '/home/mauro/IOMICO/deps/zephyr'
+version: '0.1.0'

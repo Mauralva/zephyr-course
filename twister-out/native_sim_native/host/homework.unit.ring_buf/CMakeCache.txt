@@ -354,6 +354,9 @@ NSI_DIR:PATH=/home/mauro/IOMICO/deps/zephyr/scripts/native_simulator
 //Path to a program.
 OPENOCD:FILEPATH=OPENOCD-NOTFOUND
 
+//No help, variable specified on the command line.
+OVERLAY_CONFIG:UNINITIALIZED=/home/mauro/IOMICO/zephyr-course/twister-out/native_sim_native/host/homework.unit.ring_buf/twister/testsuite_extra.conf
+
 //Path to a program.
 PAHOLE:FILEPATH=PAHOLE-NOTFOUND
 
@@ -373,7 +376,7 @@ SOC_FULL_DIR:PATH=/home/mauro/IOMICO/deps/zephyr/soc/native/inf_clock
 TC_NAME:UNINITIALIZED=homework.unit.ring_buf
 
 //No help, variable specified on the command line.
-TC_RUNID:UNINITIALIZED=00f1fcdd18eec8ce03c05e678daf40c4
+TC_RUNID:UNINITIALIZED=3f8ebfee6205fc214c69b01c8192c8e4
 
 //True if toolchain supports newlib
 TOOLCHAIN_HAS_NEWLIB:BOOL=OFF

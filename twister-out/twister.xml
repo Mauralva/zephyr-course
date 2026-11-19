@@ -1,8 +1,8 @@
 <testsuites>
-	<testsuite name="native_sim/native" timestamp="2026-11-19T19:49:33.075674" time="0.12" tests="1" failures="0" errors="0" skipped="0">
+	<testsuite name="native_sim/native" timestamp="2026-11-19T23:00:50.998217" time="0.11" tests="1" failures="0" errors="0" skipped="0">
 		<properties>
 			<property name="version" value="v4.2.0" />
 		</properties>
-		<testcase classname="native_sim/native:homework.unit.ring_buf" name="homework.unit.ring_buf" time="0.12" />
+		<testcase classname="native_sim/native:homework.unit.ring_buf" name="homework.unit.ring_buf" time="0.11" />
 	</testsuite>
 </testsuites>
